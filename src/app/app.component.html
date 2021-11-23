@@ -1,0 +1,29 @@
+<!--app.component.html-->
+<!--Par: William John Adam Trindade-->
+<!--2021-11-14-->
+
+<div
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayoutWrap
+  fxLayoutGap="10px"
+  fxLayoutAlign="center"
+>
+  <ng-container *ngFor="let f of fvs">
+    <forfait-mini [forfait]="f" *ngIf="f.vedette"></forfait-mini>
+  </ng-container>
+</div>
+<hr />
+<div
+  fxLayout="row wrap"
+  fxLayout.sm="column"
+  fxLayoutWrap
+  fxLayoutGap="10.5%"
+  fxLayoutAlign="center"
+>
+  <ng-container *ngFor="let f of fvs">
+    <forfait-complet [forfait]="f"></forfait-complet>
+  </ng-container>
+</div>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<router-outlet></router-outlet>
