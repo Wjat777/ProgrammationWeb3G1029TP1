@@ -26,7 +26,10 @@
         <p class="prix">{{ forfait.prix }}$</p>
       </ng-template>
       <p class="taxes">{{ forfait.taxes }}</p>
-      <p class="dates">{{ forfait.dateDepart }}</p>
+      <p class="dates">
+        {{ forfait.dateDepart | date: "shortDate" }} -
+        {{ forfait.dateRetour | date: "shortDate" }}
+      </p>
       <button class="btn btn-success">Selection de chambre</button>
     </div>
   </mat-card>

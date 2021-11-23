@@ -35,6 +35,6 @@ export class ForfaitMiniComponent {
 
   diffDateInDays(start: Date, end: Date) {
     //source https://stackoverflow.com/questions/43735678/typescript-get-difference-between-two-dates-in-days
-    return Math.ceil(start.valueOf() - end.valueOf()) / (1000 * 3600 * 24);
+    return Math.ceil(end.valueOf() - start.valueOf()) / (1000 * 3600 * 24);
   }
 }

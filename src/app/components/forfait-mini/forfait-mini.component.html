@@ -14,8 +14,9 @@
     <p class="prix">{{ forfait.prix }}$</p>
     <p class="taxes">{{ forfait.taxes }}</p>
     <p class="dates">
-      {{ forfait.dateDepart | date: "shortDate" }},
-      {{ diffDateInDays(forfait.dateDepart, forfait.dateRetour) }} Jours
+      {{ forfait.dateDepart | date: "shortDate" }} ,
+      {{ diffDateInDays(forfait.dateDepart, forfait.dateRetour) }}
+      Jours
     </p>
   </div>
 </mat-card>
